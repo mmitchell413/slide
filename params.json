@@ -1,0 +1,15 @@
+var query = {
+  'brand': '',
+  'frets': '',
+  'type': 'electric | acoustic | acoustic-electric | steel',
+  'pickups': {
+    'active': 'true | false',
+    'coils': 'single | double (humbucker)',
+    'number': ''
+  }
+  'sound': {
+    'tone': 'warm to cool',
+    'range': '',
+    
+  }
+}

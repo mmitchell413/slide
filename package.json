@@ -1,0 +1,38 @@
+{
+  "name": "slide",
+  "version": "0.0.1",
+  "description": "slide project json file",
+  "main": "index.js",
+  "dependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "grunt": "^1.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "react-dom": "^15.4.2",
+    "webpack": "^1.14.0"
+  },
+  "scripts": {
+    "webpack": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmitchell413/slide.git"
+  },
+  "keywords": [
+    "slide",
+    "guitar"
+  ],
+  "author": "Matt Mitchell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmitchell413/slide/issues"
+  },
+  "homepage": "https://github.com/mmitchell413/slide#readme"
+}
