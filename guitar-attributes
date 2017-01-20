@@ -1,0 +1,23 @@
+var query = {
+  'brand': '',
+  'frets': '',
+  'type': 'electric | acoustic | acoustic-electric | steel',
+  'pickups': {
+    'active': 'true | false',
+    'coils': 'single | double (humbucker)',
+    'number': ''
+  }
+  'sound': {
+    'tone': 'warm to cool',
+    'range': '',
+
+  }
+}
+
+Brand
+Fret number
+Neck circumference
+Type: electric / acoustic / acoustic-electric / steel
+Pickups: Active / Coils / #
+  Individual Pickup Attributes: brand / active / coils / sound / tone
+Sound

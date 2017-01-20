@@ -46,6 +46,12 @@ module.exports = function(grunt) {
             }
         },
 
+        shell: {
+          webpack: {
+            command: 'npm run webpack'
+          }
+        },
+
             postcss: {
                 options: {
                     map: true,
@@ -63,12 +69,11 @@ module.exports = function(grunt) {
           uglify: {
             my_target: {
               files: {
-                'prod/js/production.min.js': ['dev/js/production.js'],
-                'prod/build/app.bundle.js': ['dev/build/app.bundle.js']
+                'dev/js/production.min.js': ['dev/js/production.js'],
+                'prod/js/production.min.js': ['dev/js/production.js']
               }
             }
           },
-
         watch: {
             scripts: {
                 files: ['dev/js/*.js'],
@@ -91,6 +96,13 @@ module.exports = function(grunt) {
                     spawn:false,
                 }
             },
+            shell: {
+              files: ['dev/js/libs/react/**/*.js', 'dev/js/libs/react/*.js'],
+              tasks: ['shell'],
+              options: {
+                spawn: false
+              }
+            },
             copyfiles: {
                 files: ['dev/*.php', 'dev/img/*'],
                 tasks: ['copy'],
@@ -109,8 +121,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-shell');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['concat', 'sass', 'postcss:dist', 'imagemin', 'uglify', 'copy']);
+    grunt.registerTask('default', ['concat', 'sass', 'postcss:dist', 'shell', 'imagemin', 'uglify', 'copy']);
 
 };
